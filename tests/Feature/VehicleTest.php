@@ -10,9 +10,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class VehicleTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     */
+    use RefreshDatabase;
     public function test_user_can_get_their_own_vehicle(): void
     {
         $ali = User::factory()->create();
