@@ -21,6 +21,6 @@ class ZoneTest extends TestCase
             ]])
             ->assertJsonPath('data.0.id', 1)
             ->assertJsonPath('data.0.name', 'Green Zone')
-            ->assertJsonPath('data.0.price_per_hour', 100);
+            ->assertJsonPath('data.0.price_per_hour', '100');
     }
 }
