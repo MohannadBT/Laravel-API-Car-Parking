@@ -1,0 +1,681 @@
+name: Auth
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/auth/register
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: pothbv
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: minerva67@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: optio
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: pothbv
+      email: minerva67@example.com
+      password: optio
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/auth/login
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: tlindgren@example.net
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: rerum
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      email: tlindgren@example.net
+      password: rerum
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/auth/logout
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/zones
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":1,"name":"Green Zone","price_per_hour":"100"},{"id":2,"name":"Yellow Zone","price_per_hour":"200"},{"id":3,"name":"Red Zone","price_per_hour":"300"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/profile
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/v1/profile
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: laudantium
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: amir.mcglynn@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: laudantium
+      email: amir.mcglynn@example.com
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/v1/password
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      current_password:
+        name: current_password
+        description: ''
+        required: true
+        example: aut
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: commodi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      current_password: aut
+      password: commodi
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/vehicles
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/vehicles
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      plate_number:
+        name: plate_number
+        description: ''
+        required: true
+        example: corrupti
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      plate_number: corrupti
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/vehicles/{id}'
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the vehicle.'
+        required: true
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 6
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/v1/vehicles/{id}'
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the vehicle.'
+        required: true
+        example: 8
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 8
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      plate_number:
+        name: plate_number
+        description: ''
+        required: true
+        example: soluta
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      plate_number: soluta
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/vehicles/{id}'
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the vehicle.'
+        required: true
+        example: 10
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 10
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/parkings/start
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      vehicle_id:
+        name: vehicle_id
+        description: ''
+        required: true
+        example: 17
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      zone_id:
+        name: zone_id
+        description: ''
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      vehicle_id: 17
+      zone_id: 1
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/parkings/{parking_id}'
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      parking_id:
+        name: parking_id
+        description: 'The ID of the parking.'
+        required: true
+        example: 9
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      parking_id: 9
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/v1/parkings/{parking_id}'
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      parking_id:
+        name: parking_id
+        description: 'The ID of the parking.'
+        required: true
+        example: 14
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      parking_id: 14
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
