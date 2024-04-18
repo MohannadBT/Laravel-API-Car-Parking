@@ -24,7 +24,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('auth/register', Auth\RegisterController::class);
 Route::post('auth/login', Auth\LoginController::class);
-Route::post('auth/logout', Auth\LogoutController::class);
 
 Route::get('zones', [ZoneController::class,'index']);
 
@@ -36,7 +35,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('parkings/start', [ParkingController::class, 'start']);
     Route::get('parkings/{parking}', [ParkingController::class, 'show']);
     Route::put('parkings/{parking}', [ParkingController::class, 'stop']);
-
+    Route::post('auth/logout', Auth\LogoutController::class);
     // Route::apiResource('zones', ZoneController::class);
 })
 ;
